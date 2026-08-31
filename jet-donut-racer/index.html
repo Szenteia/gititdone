@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jet Donut Racer</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <div id="game-canvas" aria-label="Jet Donut Racer 3D játéktér"></div>
+
+    <section class="hud" aria-live="polite">
+      <div class="hud-card"><span>KÖR</span><strong id="lap">1 / 3</strong></div>
+      <div class="hud-card"><span>IDŐ</span><strong id="time">00:00.0</strong></div>
+      <div class="hud-card"><span>SEBESSÉG</span><strong id="speed">0</strong></div>
+    </section>
+
+    <section id="start-panel" class="start-panel">
+      <p class="eyebrow">SINGLE RUN · PROTOTÍPUS 01</p>
+      <h1>JET DONUT RACER</h1>
+      <p>Három kör. Egy sugárhajtású fánk. Egy folyamatosan hullámzó, kereszteződő pálya.</p>
+      <div class="controls-copy">
+        <span><b>W / ↑</b> gyorsítás</span>
+        <span><b>S / ↓</b> lassítás</span>
+        <span><b>A D / ← →</b> kormányzás</span>
+      </div>
+      <button id="start-button" type="button">START RUN</button>
+    </section>
+
+    <section id="finish-panel" class="finish-panel hidden">
+      <p class="eyebrow">RUN COMPLETE</p>
+      <h2>CÉLBA ÉRTÉL</h2>
+      <p id="finish-time">Összidő: 00:00.0</p>
+      <button id="restart-button" type="button">ÚJ RUN</button>
+    </section>
+
+    <div class="mobile-controls" aria-label="Mobil irányítás">
+      <button type="button" data-control="left" aria-label="Balra">←</button>
+      <button type="button" data-control="accelerate" aria-label="Gyorsítás">▲</button>
+      <button type="button" data-control="brake" aria-label="Lassítás">▼</button>
+      <button type="button" data-control="right" aria-label="Jobbra">→</button>
+    </div>
+
+    <div class="multiplayer-status">2P ROOM SYSTEM · READY FOR NEXT MILESTONE</div>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
